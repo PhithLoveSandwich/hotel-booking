@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 26, 2025 at 06:28 AM
+-- Generation Time: Mar 26, 2025 at 07:07 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -54,20 +54,21 @@ CREATE TABLE `rooms` (
   `id` int(11) NOT NULL,
   `room_type` varchar(50) NOT NULL,
   `price` decimal(10,2) NOT NULL,
-  `status` enum('available','booked') DEFAULT 'available'
+  `status` enum('available','booked') DEFAULT 'available',
+  `image_url` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `rooms`
 --
 
-INSERT INTO `rooms` (`id`, `room_type`, `price`, `status`) VALUES
-(1, 'Standard Room', 1000.00, 'available'),
-(2, 'Standard Room', 1000.00, 'available'),
-(3, 'Standard Room', 1000.00, 'available'),
-(4, 'Standard Room', 1000.00, 'available'),
-(5, 'Special Room', 2000.00, 'available'),
-(6, 'Special Room', 2000.00, 'available');
+INSERT INTO `rooms` (`id`, `room_type`, `price`, `status`, `image_url`) VALUES
+(1, 'Standard Room', 1000.00, 'available', 'standard_room.jpg'),
+(2, 'Standard Room', 1000.00, 'available', 'standard_room.jpg'),
+(3, 'Standard Room', 1000.00, 'available', 'standard_room.jpg'),
+(4, 'Standard Room', 1000.00, 'available', 'standard_room.jpg'),
+(5, 'Special Room', 2000.00, 'available', 'special_room.jpg'),
+(6, 'Special Room', 2000.00, 'available', 'special_room.jpg');
 
 -- --------------------------------------------------------
 
